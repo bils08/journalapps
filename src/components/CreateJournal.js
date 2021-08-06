@@ -65,7 +65,7 @@ export default class CreateJournal extends Component {
                         <input type="text" 
                                className="form-control"
                                value={this.state.username}
-                               onChange={this.onChangeUsername} required />
+                               onChange={this.onChangeUsername} />
                     </div>
                     <div className="form-group">
                         <label>Content: </label>

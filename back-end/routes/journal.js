@@ -41,6 +41,10 @@ router.route('/update/:id').post((req,res) => {
            journal.username =  req.body.username;
            journal.content = req.body.content;
            journal.date = Date.parse(req.body.date);
+
+           journal.save()
+            .then(() => res.json('Journal updated!'))
+            .catch(err => res.status(400).json('Error: ' + err));
        })
        .catch(err => res.status(400).json('Error: ' + err)); 
 });

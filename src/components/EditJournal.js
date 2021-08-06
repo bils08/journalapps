@@ -30,7 +30,7 @@ export default class EditJournals extends Component {
             .catch(function(error) {
                 console.log("line 31: " + error);
             })
-        
+        console.log("id journal: " + this.props.match.params.id);
     }
 
     onChangeUsername(e) {
@@ -65,6 +65,7 @@ export default class EditJournals extends Component {
         axios.post("http://localhost:5000/journal/update/"+this.props.match.params.id, journal)
             .then(res => console.log(res.data));
         
+        // console.log("id journal update: " + this.match.params.id);
         window.location = "/";
     }
 
@@ -77,7 +78,7 @@ export default class EditJournals extends Component {
                         <input type="text" 
                                className="form-control"
                                value={this.state.username}
-                               onChange={this.onChangeUsername} required />
+                               onChange={this.onChangeUsername} />
                     </div>
                     <div className="form-group">
                         <label>Content: </label>

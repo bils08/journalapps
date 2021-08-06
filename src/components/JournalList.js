@@ -8,7 +8,8 @@ const Journals = props => (
         <td>{props.journal.content}</td>
         <td>{props.journal.date.substring(0,10)}</td>
         <td>
-            <Link to={"/edit/"+props.journal._id}>edit</Link> | <a href="#" onClick={() => { props.deleteJournal(props.journal._id)}}>delete</a>
+            <Link to={"/edit/"+props.journal._id}>edit</Link> | 
+            <a href="#" onClick={() => { props.deleteJournal(props.journal._id)}}>delete</a>
         </td>
     </tr>
 )

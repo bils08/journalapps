@@ -45,7 +45,7 @@ export default class CreateUsers extends Component {
                         <input type="text"
                                className="form-control"
                                value={this.state.username}
-                               onChange={this.onChangeUsername} required />
+                               onChange={this.onChangeUsername} />
                     </div>
                     <br/>
                     <div className="form-group">
