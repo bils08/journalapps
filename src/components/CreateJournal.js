@@ -21,12 +21,6 @@ export default class CreateJournal extends Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.setState({
-    //         username: "billy"
-    //     });
-    // }
-
     onChangeUsername(e) {
         this.setState({
             username: e.target.value
@@ -75,7 +69,7 @@ export default class CreateJournal extends Component {
                     </div>
                     <div className="form-group">
                         <label>Content: </label>
-                        <input type="text"
+                        <textarea type="text"
                                className="form-control"
                                value={this.state.content}
                                onChange={this.onChangeContent} />
