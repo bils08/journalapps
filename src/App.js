@@ -8,6 +8,7 @@ import JournalList from "./components/JournalList";
 import EditJournal from "./components/EditJournal";
 import CreateJournal from "./components/CreateJournal";
 import CreateUser from "./components/CreateUser";
+import UserList from "./components/UserList";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/edit/:id" component={EditJournal} />
       <Route path="/create" component={CreateJournal} />
       <Route path="/user" component={CreateUser} />
+      <Route path="/userList" component={UserList} />
     </Router>
   );
 }
